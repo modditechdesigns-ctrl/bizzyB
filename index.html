@@ -1,0 +1,1509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bizzy 'B' Bites | Premium Fast Food in Garki, Abuja</title>
+    <meta name="description" content="Experience freshly prepared, premium fast food in Garki, Abuja. Dine-in, takeaway, and swift delivery from Bizzy 'B' Bites." />
+    <meta property="og:title" content="Bizzy 'B' Bites | Premium Fast Food in Garki, Abuja" />
+    <meta property="og:description" content="Fresh, premium meals and snacks in Garki, Abuja." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" />
+
+    <style>
+        /* ===== ROOT VARIABLES ===== */
+        :root {
+            --background: #faf8f5;
+            --foreground: #1e1c1a;
+            --card: #ffffff;
+            --primary: #6b4f3c;
+            --primary-light: #8a6b53;
+            --primary-foreground: #ffffff;
+            --secondary: #f4efe8;
+            --muted: #e8e0d6;
+            --muted-foreground: #6b5d4b;
+            --accent: #c4b393;
+            --border: #e2dccf;
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.10);
+            --radius: 1.25rem;
+            --radius-sm: 0.75rem;
+            --font-display: "Outfit", system-ui, sans-serif;
+            --font-body: "Figtree", system-ui, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== RESET & BASE ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+        body {
+            background: var(--background);
+            color: var(--foreground);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-display);
+            margin: 0;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+        p {
+            margin: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* ===== CONTAINERS ===== */
+        .container-wide {
+            width: 100%;
+            max-width: 1280px;
+            margin-inline: auto;
+            padding-inline: 1.5rem;
+        }
+        .container-tight {
+            width: 100%;
+            max-width: 900px;
+            margin-inline: auto;
+            padding-inline: 1.5rem;
+        }
+        .center {
+            text-align: center;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .display-xl {
+            font-size: clamp(2.2rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 0.92;
+            letter-spacing: -0.03em;
+        }
+        .display-lg {
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            font-weight: 800;
+        }
+        .display-md {
+            font-size: clamp(1.4rem, 4vw, 2.4rem);
+            font-weight: 700;
+        }
+        .lead {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--muted-foreground);
+        }
+        @media (min-width: 640px) {
+            .lead {
+                font-size: 1.1rem;
+            }
+        }
+        .small {
+            font-size: 0.85rem;
+        }
+        .muted {
+            color: var(--muted-foreground);
+        }
+        .accent {
+            color: var(--primary);
+        }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--primary);
+            background: rgba(107, 79, 60, 0.10);
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(107, 79, 60, 0.06);
+        }
+        .eyebrow .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--primary);
+            display: inline-block;
+        }
+        .eyebrow-solid {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.85rem 2rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-body);
+            text-decoration: none;
+            user-select: none;
+            min-height: 48px;
+            border-radius: 999px;
+            background: transparent;
+            color: var(--foreground);
+            touch-action: manipulation; /* improve mobile tap response */
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(107, 79, 60, 0.25);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(107, 79, 60, 0.35);
+            background: var(--primary-light);
+        }
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--foreground);
+            border-color: rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .btn-ghost:hover {
+            background: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--foreground);
+            border-color: var(--border);
+            padding: 0.6rem 1.5rem;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-invert {
+            background: white;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+        .btn-invert:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: var(--background);
+        }
+        .btn .icon {
+            width: 1.1rem;
+            height: 1.1rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+        /* ===== HEADER / NAVBAR ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 0;
+            transition: var(--transition);
+        }
+        .site-header.scrolled {
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(14px) saturate(1.1);
+            -webkit-backdrop-filter: blur(14px) saturate(1.1);
+            padding: 0.6rem 0;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.04);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .brand {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: -0.02em;
+            color: var(--foreground);
+            white-space: nowrap;
+        }
+        .brand-lg {
+            font-size: 1.5rem;
+        }
+        .main-nav {
+            display: none;
+            gap: 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--muted-foreground);
+        }
+        .main-nav a {
+            position: relative;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        .main-nav a:hover {
+            color: var(--foreground);
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .main-nav {
+                display: flex;
+            }
+        }
+        .order-label {
+            display: none;
+        }
+        @media (min-width: 640px) {
+            .order-label {
+                display: inline;
+            }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100dvh; /* dynamic viewport height for mobile browsers */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(250, 248, 245, 0.95) 0%,
+                rgba(250, 248, 245, 0.65) 50%,
+                rgba(250, 248, 245, 0.25) 80%,
+                rgba(250, 248, 245, 0) 100%
+            );
+        }
+        /* Slightly stronger overlay for very small screens */
+        @media (max-width: 480px) {
+            .hero-overlay {
+                background: linear-gradient(
+                    180deg,
+                    rgba(250, 248, 245, 0.96) 0%,
+                    rgba(250, 248, 245, 0.8) 40%,
+                    rgba(250, 248, 245, 0.4) 80%,
+                    rgba(250, 248, 245, 0) 100%
+                );
+            }
+        }
+        .hero-content {
+            position: relative;
+            width: 100%;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center; /* center vertically on all devices */
+            padding: 6rem 1.5rem 3rem;
+        }
+        .hero-grid {
+            display: grid;
+            gap: 3rem;
+            width: 100%;
+        }
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 6fr 5fr;
+                align-items: end;
+            }
+        }
+        .hero-copy {
+            text-align: center; /* center text on mobile for a friendlier hero */
+        }
+        @media (min-width: 768px) {
+            .hero-copy {
+                text-align: left;
+            }
+        }
+        .hero-copy .lead {
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .hero-copy .lead {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            .hero-ctas {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Hero Card */
+        .hero-card {
+            display: none;
+            margin-left: auto;
+            max-width: 22rem;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px) saturate(1.2);
+            -webkit-backdrop-filter: blur(16px) saturate(1.2);
+            padding: 1.75rem 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .hero-card>*+* {
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-card {
+                display: block;
+            }
+        }
+        .hero-fact {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+        .fact-icon {
+            width: 2.8rem;
+            height: 2.8rem;
+            display: grid;
+            place-items: center;
+            background: var(--secondary);
+            border-radius: 999px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+        .fact-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+        .fact-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--muted-foreground);
+            font-weight: 600;
+        }
+        .fact-value {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 5rem 0;
+        }
+        @media (min-width: 768px) {
+            .section {
+                padding: 7rem 0;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section {
+                padding: 9rem 0;
+            }
+        }
+        .section-secondary {
+            background: var(--secondary);
+            position: relative;
+        }
+        .section-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
+            opacity: 0.2;
+        }
+
+        /* ===== GRID ===== */
+        .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .gap-12 {
+            gap: 2rem;
+        }
+        .gap-16 {
+            gap: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            .gap-12 {
+                gap: 3rem;
+            }
+            .gap-16 {
+                gap: 4rem;
+            }
+        }
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8 {
+            grid-column: 1 / -1;
+        }
+        @media (min-width: 1024px) {
+            .col-4 {
+                grid-column: span 4;
+            }
+            .col-5 {
+                grid-column: span 5;
+            }
+            .col-6 {
+                grid-column: span 6;
+            }
+            .col-7 {
+                grid-column: span 7;
+            }
+            .col-8 {
+                grid-column: span 8;
+            }
+            .sticky-col {
+                position: sticky;
+                top: 7rem;
+                align-self: start;
+            }
+        }
+
+        /* ===== SIGNATURE ITEMS (MENU) ===== */
+        .signature-list {
+            display: grid;
+            gap: 3rem;
+        }
+        @media (min-width: 768px) {
+            .signature-list {
+                gap: 4.5rem;
+            }
+        }
+        .signature {
+            display: grid;
+            gap: 1.5rem;
+            align-items: center;
+            background: var(--card);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+        .signature:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border);
+        }
+        @media (min-width: 768px) {
+            .signature {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+                padding: 2rem;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+            }
+            .signature:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        .signature.reverse .signature-img {
+            order: 2;
+        }
+        .signature.reverse .signature-body {
+            order: 1;
+        }
+        @media (max-width: 767px) {
+            .signature.reverse .signature-img {
+                order: unset;
+            }
+            .signature.reverse .signature-body {
+                order: unset;
+            }
+        }
+        .signature-img {
+            position: relative;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: var(--secondary);
+            box-shadow: var(--shadow-sm);
+        }
+        .signature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .signature-img:hover img {
+            transform: scale(1.04);
+        }
+        .tag {
+            position: absolute;
+            top: 0.9rem;
+            left: 0.9rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: var(--primary);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            box-shadow: var(--shadow-sm);
+        }
+        .signature-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .signature-head h3 {
+            font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+            font-weight: 700;
+        }
+        .price {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+        .signature-body>*+* {
+            margin-top: 0.75rem;
+        }
+        .signature-body .btn {
+            margin-top: 1.25rem;
+        }
+
+        /* ===== STORY ===== */
+        .story-flex {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .story-image-wrapper {
+            flex: 1;
+            max-width: 50%;
+            position: relative;
+        }
+        .story-image-wrapper .story-frame {
+            position: absolute;
+            inset: -1.5rem 1.5rem 1.5rem -1.5rem;
+            border: 2px solid rgba(107, 79, 60, 0.15);
+            border-radius: var(--radius);
+            pointer-events: none;
+            z-index: 0;
+            transition: var(--transition);
+        }
+        .story-image-wrapper:hover .story-frame {
+            inset: -1.2rem 1.2rem 1.2rem -1.2rem;
+            border-color: var(--primary);
+        }
+        .story-image-wrapper .story-img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius);
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+            background: var(--secondary);
+            box-shadow: var(--shadow-md);
+        }
+        .story-text-content {
+            flex: 1;
+            max-width: 50%;
+        }
+        .story-text-content>*+* {
+            margin-top: 1.25rem;
+        }
+        .story-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .story-features>div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+        .feature-icon {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+        .feature-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+        .story-features strong {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .story-features .small {
+            font-size: 0.8rem;
+        }
+        @media (max-width: 768px) {
+            .story-flex {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0 1rem;
+                gap: 2rem;
+            }
+            .story-image-wrapper,
+            .story-text-content {
+                max-width: 100%;
+                flex: auto;
+            }
+            .story-image-wrapper .story-frame {
+                display: none;
+            }
+            .story-features {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.25rem;
+            }
+        }
+
+        /* ===== VISIT ===== */
+        .visit-list {
+            margin-top: 2.5rem;
+            display: grid;
+            gap: 1.75rem;
+        }
+        .visit-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .visit-icon {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            display: grid;
+            place-items: center;
+            background: var(--secondary);
+            border-radius: 999px;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        .visit-item:hover .visit-icon {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+        .visit-icon svg {
+            width: 22px;
+            height: 22px;
+        }
+        .visit-item h3 {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+        .link {
+            font-weight: 500;
+        }
+        .link:hover {
+            color: var(--primary);
+        }
+        .map-wrap {
+            position: relative;
+            height: 100%;
+            min-height: 280px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        @media (min-width: 768px) {
+            .map-wrap {
+                min-height: 400px;
+            }
+        }
+        .map-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ===== REVIEWS ===== */
+        .review-section {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .review-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        @media (min-width: 768px) {
+            .review-section {
+                padding: 7rem 0;
+            }
+        }
+        .star-circle {
+            margin: 0 auto;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            display: grid;
+            place-items: center;
+            color: #fbbf24;
+        }
+        .star-circle svg {
+            width: 30px;
+            height: 30px;
+        }
+        .review-quote {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3.5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin: 1.5rem auto 1.5rem;
+            max-width: 48rem;
+        }
+        .review-author {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .review-meta {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter-wrapper {
+            background: var(--secondary);
+            padding: 4rem 1.5rem;
+            border-radius: var(--radius);
+            max-width: 48rem;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        @media (min-width: 768px) {
+            .newsletter-wrapper {
+                padding: 5rem 4rem;
+            }
+        }
+        .newsletter-wrapper>*+* {
+            margin-top: 1rem;
+        }
+        .newsletter-form {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        @media (min-width: 640px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+        .newsletter-form input {
+            flex: 1;
+            min-width: 0; /* prevent flex item overflow */
+            padding: 0.85rem 1.5rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: white;
+            font: inherit;
+            color: var(--foreground);
+            outline: none;
+            transition: var(--transition);
+            min-height: 48px;
+            font-size: 0.95rem;
+        }
+        .newsletter-form input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(107, 79, 60, 0.08);
+        }
+        .newsletter-form input::placeholder {
+            color: var(--muted-foreground);
+            opacity: 0.7;
+        }
+        .newsletter-form .btn {
+            flex-shrink: 0;
+        }
+        .newsletter-success {
+            margin-top: 1.5rem;
+            background: rgba(107, 79, 60, 0.08);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--foreground);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 4rem 0 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .site-footer {
+                padding: 5rem 0 2.5rem;
+                margin-top: 0;
+            }
+        }
+        .site-footer .brand {
+            color: white;
+        }
+        .footer-grid {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+                gap: 4rem;
+            }
+        }
+        .footer-about {
+            margin-top: 0.75rem;
+            max-width: 24rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .socials {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        .socials a {
+            display: grid;
+            place-items: center;
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: var(--transition);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .socials a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+        .socials a svg {
+            width: 18px;
+            height: 18px;
+        }
+        .site-footer h3 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .site-footer li {
+            font-size: 0.9rem;
+            padding: 0.4rem 0;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+        .site-footer li a:hover {
+            color: white;
+            opacity: 1;
+        }
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                margin-top: 4rem;
+            }
+        }
+
+        /* ===== RESPONSIVE TWEAKS ===== */
+        @media (max-width: 480px) {
+            .container-wide {
+                padding-inline: 1rem;
+            }
+            .container-tight {
+                padding-inline: 1rem;
+            }
+            .hero-content {
+                padding: 5rem 1rem 2.5rem;
+            }
+            .hero-ctas .btn {
+                font-size: 0.85rem;
+                padding: 0.7rem 1.25rem;
+                min-height: 44px;
+            }
+            .signature {
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .signature-head h3 {
+                font-size: 1.1rem;
+            }
+            .price {
+                font-size: 1rem;
+            }
+            .section {
+                padding: 3.5rem 0;
+            }
+            .review-quote {
+                font-size: 1.2rem;
+            }
+            .newsletter-wrapper {
+                padding: 2rem 1.25rem;
+            }
+        }
+
+        /* ===== UTILITIES ===== */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mt-1 {
+            margin-top: 1rem;
+        }
+        .mt-2 {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header" class="site-header">
+        <div class="container-wide header-inner">
+            <a href="#" class="brand">Bizzy 'B' Bites</a>
+            <nav class="main-nav" aria-label="Primary">
+                <a href="#menu">Menu</a>
+                <a href="#story">Story</a>
+                <a href="#visit">Visit</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+            <a class="btn btn-primary btn-pill order-btn" href="tel:08035791411">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.6a2 2 0 0 1-.45 2.11L8 9.59a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.83.28 1.7.48 2.6.6A2 2 0 0 1 22 16.92z"/></svg>
+                <span class="order-label">Order now</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=1920&q=80" alt="" role="presentation" loading="eager" />
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container-wide hero-content">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="dot"></span>Fast food restaurant — Garki, Abuja</p>
+                    <h1 class="display-xl">
+                        Fresh meals.<br />
+                        <span class="accent">Full flavour.</span>
+                    </h1>
+                    <p class="lead">
+                        Tasty, fresh meals and snacks made for busy people. Dine in,
+                        takeaway, or get it delivered across Garki.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#menu" class="btn btn-primary btn-pill">See the menu <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#visit" class="btn btn-ghost btn-pill">Find us</a>
+                    </div>
+                </div>
+                <aside class="hero-card">
+                    <div class="hero-fact">
+                        <div class="fact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fact-label">Today</p>
+                            <p class="fact-value">Opens 8:00 AM</p>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <div class="fact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fact-label">Google rating</p>
+                            <p class="fact-value">4.0 <span class="muted small">(1 review)</span></p>
+                        </div>
+                    </div>
+                    <div class="hero-fact">
+                        <div class="fact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M12 4v16"/>
+                                <path d="M2 9h20"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="fact-label">Service</p>
+                            <p class="fact-value">Dine-in &middot; Takeaway &middot; Delivery</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SIGNATURE ITEMS ===== -->
+    <section id="menu" class="section">
+        <div class="container-wide grid-12 gap-16">
+            <div class="col-4 sticky-col">
+                <p class="eyebrow-solid">Order like a regular</p>
+                <h2 class="display-lg">The signatures</h2>
+                <p class="muted lead" style="margin-top: 0.75rem;">
+                    These are the dishes people come back for. Made fresh, served fast,
+                    and packed with the flavours that make Abuja taste like home.
+                </p>
+                <a href="tel:08035791411" class="btn btn-outline btn-pill" style="margin-top: 2rem;">Call to order &rarr;</a>
+            </div>
+            <div class="col-8 signature-list">
+                <article class="signature">
+                    <div class="signature-img">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1024&q=80" alt="Jollof and grilled chicken" loading="lazy" />
+                        <span class="tag">Best seller</span>
+                    </div>
+                    <div class="signature-body">
+                        <div class="signature-head">
+                            <h3>Jollof &amp; Grilled Chicken</h3>
+                            <span class="price">₦3,500</span>
+                        </div>
+                        <p class="muted">
+                            Smoky party jollof rice with a perfectly grilled chicken thigh,
+                            fried plantains, and our house pepper sauce.
+                        </p>
+                        <a href="tel:08035791411" class="btn btn-primary btn-pill">Order this</a>
+                    </div>
+                </article>
+                <article class="signature reverse">
+                    <div class="signature-img">
+                        <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=1024&q=80" alt="Suya skewers" loading="lazy" />
+                        <span class="tag">Street classic</span>
+                    </div>
+                    <div class="signature-body">
+                        <div class="signature-head">
+                            <h3>Suya Skewers</h3>
+                            <span class="price">₦2,000</span>
+                        </div>
+                        <p class="muted">
+                            Spiced beef suya rubbed with groundnut seasoning, served fresh
+                            off the grill with onions and tomatoes.
+                        </p>
+                        <a href="tel:08035791411" class="btn btn-primary btn-pill">Order this</a>
+                    </div>
+                </article>
+                <article class="signature">
+                    <div class="signature-img">
+                        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=1024&q=80" alt="Puff-puff box" loading="lazy" />
+                        <span class="tag">Snack</span>
+                    </div>
+                    <div class="signature-body">
+                        <div class="signature-head">
+                            <h3>Puff-Puff Box</h3>
+                            <span class="price">₦800</span>
+                        </div>
+                        <p class="muted">
+                            Golden, pillowy Nigerian doughnuts, lightly sweetened and fried
+                            to order. The perfect snack on the go.
+                        </p>
+                        <a href="tel:08035791411" class="btn btn-primary btn-pill">Order this</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORIGIN STORY ===== -->
+    <section id="story" class="section section-secondary">
+        <div class="story-flex">
+            <div class="story-image-wrapper">
+                <div class="story-frame"></div>
+                <img class="story-img" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1280&q=80" alt="Restaurant exterior" loading="lazy" />
+            </div>
+            <div class="story-text-content">
+                <p class="eyebrow-solid">Our story</p>
+                <h2 class="display-lg">Made busy. Made better.</h2>
+                <p class="muted lead">
+                    Bizzy 'B' Bites started with a simple idea: fast food doesn't have
+                    to mean boring food. We're a small kitchen on Nsukka Street in
+                    Garki, serving the meals we grew up eating — jollof, suya,
+                    puff-puff, grilled chicken — made fresh every day.
+                </p>
+                <p class="muted lead">
+                    Whether you're grabbing lunch between meetings, feeding the family,
+                    or craving a midnight snack, we make it taste like home.
+                    From our kitchen to your table, every bite celebrates the bold,
+                    comforting flavours of Nigerian street food.
+                </p>
+                <div class="story-features">
+                    <div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <strong>Made fresh</strong>
+                        <span class="muted small">Cooked to order, never sitting.</span>
+                    </div>
+                    <div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="11" rx="9" ry="4"/>
+                                <path d="M3 11v4c0 2.2 4 4 9 4s9-1.8 9-4v-4"/>
+                            </svg>
+                        </div>
+                        <strong>Local flavours</strong>
+                        <span class="muted small">Nigerian classics done right.</span>
+                    </div>
+                    <div>
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M12 4v16"/>
+                                <path d="M2 9h20"/>
+                            </svg>
+                        </div>
+                        <strong>Fast delivery</strong>
+                        <span class="muted small">Hot food to your door.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISIT ===== -->
+    <section id="visit" class="section">
+        <div class="container-wide grid-12 gap-16">
+            <div class="col-5">
+                <p class="eyebrow-solid">Visit us</p>
+                <h2 class="display-lg">Find us in Garki</h2>
+                <p class="muted lead" style="margin-top: 0.75rem;">
+                    We're easy to find — opposite ECWA Church on Nsukka Street. Come
+                    in, call ahead, or order for delivery.
+                </p>
+                <div class="visit-list">
+                    <div class="visit-item">
+                        <div class="visit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Address</h3>
+                            <p class="muted">
+                                2FCP+JM5, Nsukka St,<br />
+                                opposite ECWA Church,<br />
+                                Garki, Abuja 900110, FCT
+                            </p>
+                        </div>
+                    </div>
+                    <div class="visit-item">
+                        <div class="visit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Opening hours</h3>
+                            <p class="muted">Opens 8:00 AM daily<br /><span class="small">Call ahead to confirm closing time</span></p>
+                        </div>
+                    </div>
+                    <div class="visit-item">
+                        <div class="visit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.6a2 2 0 0 1-.45 2.11L8 9.59a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.83.28 1.7.48 2.6.6A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a class="muted link" href="tel:08035791411">0803 579 1411</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="map-wrap">
+                    <iframe title="Bizzy 'B' Bites location" src="https://maps.google.com/maps?q=Bizzy%20'B'%20Bites%20Nsukka%20Street%20Garki%20Abuja&t=&z=17&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED REVIEW ===== -->
+    <section id="reviews" class="review-section">
+        <div class="container-tight center">
+            <div class="star-circle">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+            </div>
+            <p class="small" style="opacity:0.8; margin-top:0.75rem; letter-spacing: 0.04em;">4.0 on Google &middot; based on 1 review so far</p>
+            <blockquote class="review-quote">
+                &ldquo;A place to get your tasty, fresh meals and snacks.&rdquo;
+            </blockquote>
+            <p class="review-author">Valentine Tochukwu Orji</p>
+            <p class="review-meta">Local Guide &middot; 35 reviews &amp; 23 photos &middot; reviewed 4 years ago</p>
+            <a class="btn btn-invert btn-pill" href="https://www.google.com/maps/search/?api=1&query=Bizzy+'B'+Bites+Nsukka+Street+Garki+Abuja" target="_blank" rel="noopener" style="margin-top: 2.5rem;">Read more on Google &rarr;</a>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="section" style="background: var(--background);">
+        <div class="container-wide">
+            <div class="newsletter-wrapper center">
+                <p class="eyebrow-solid">Stay in the loop</p>
+                <h2 class="display-md">Get the weekly special</h2>
+                <p class="muted" style="max-width: 32rem; margin: 0.5rem auto 0;">
+                    One email a week with our latest combo, new snacks, and delivery
+                    updates. No spam, just food.
+                </p>
+                <form id="newsletter-form" class="newsletter-form" novalidate>
+                    <input type="email" name="email" required placeholder="Enter your email" aria-label="Email address" />
+                    <button type="submit" class="btn btn-primary btn-pill">Subscribe</button>
+                </form>
+                <p id="newsletter-success" class="newsletter-success" hidden>
+                    You're on the list — see you soon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="brand brand-lg">Bizzy 'B' Bites</a>
+                    <p class="footer-about">
+                        Tasty, fresh meals and snacks on Nsukka Street, Garki, Abuja.
+                        Dine-in, takeaway, and delivery.
+                    </p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="tel:08035791411" aria-label="Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.6a2 2 0 0 1-.45 2.11L8 9.59a16 16 0 0 0 6 6l1.16-1.16a2 2 0 0 1 2.11-.45c.83.28 1.7.48 2.6.6A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quick links</h3>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#story">Our story</a></li>
+                        <li><a href="#visit">Visit us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Nsukka St, opposite ECWA Church</li>
+                        <li>Garki, Abuja 900110</li>
+                        <li><a href="tel:08035791411">0803 579 1411</a></li>
+                        <li>Opens 8am daily</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Bizzy 'B' Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        (function() {
+            const header = document.getElementById("site-header");
+            if (!header) return;
+            const onScroll = function() {
+                if (window.scrollY > 30) header.classList.add("scrolled");
+                else header.classList.remove("scrolled");
+            };
+            window.addEventListener("scroll", onScroll, { passive: true });
+            onScroll();
+        })();
+
+        (function() {
+            const form = document.getElementById("newsletter-form");
+            const success = document.getElementById("newsletter-success");
+            if (!form || !success) return;
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const input = form.querySelector("input[type='email']");
+                const email = input ? input.value.trim() : "";
+                if (!email || !/^\S+@\S+\.\S+$/.test(String(email))) {
+                    if (input) {
+                        input.focus();
+                        input.style.borderColor = "#c0392b";
+                        input.style.boxShadow = "0 0 0 4px rgba(192,57,43,0.1)";
+                        setTimeout(function() {
+                            input.style.borderColor = "";
+                            input.style.boxShadow = "";
+                        }, 1200);
+                    }
+                    return;
+                }
+                // Instead of hiding the form, just show the success message
+                form.reset();
+                success.hidden = false;
+                // Keep the form visible for another subscription if needed
+            });
+        })();
+
+        (function() {
+            const el = document.getElementById("year");
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+                a.addEventListener("click", function(e) {
+                    const href = a.getAttribute("href");
+                    if (!href || href === "#") return;
+                    const target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: top, behavior: "smooth" });
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
